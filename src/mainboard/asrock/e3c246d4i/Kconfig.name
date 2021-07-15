@@ -1,0 +1,2 @@
+config BOARD_ASROCK_E3C246D4I
+	bool "E3C246D4I"
