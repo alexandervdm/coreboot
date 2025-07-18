@@ -20,10 +20,9 @@ static const struct cnl_mb_cfg memcfg = {
 		.read_type = READ_SMBUS,
 		.spd_spec = {.spd_smbus_address = 0xa6},
 	},
-	/* TODO: No idea, taken from coffeelake rvp */
-	.rcomp_resistor = {121, 81, 100},
-	/* TODO: No idea, taken from coffeelake rvp*/
-	.rcomp_targets = {100, 40, 20, 20, 26},
+
+	.rcomp_resistor = {121, 75, 100},
+	.rcomp_targets  = {50, 25, 20, 20, 26},
 	.dq_pins_interleaved = 1,
 	.ect = 0,
 	.vref_ca_config = 2,

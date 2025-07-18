@@ -3,47 +3,39 @@ if BOARD_ASROCK_E3C246D4I
 config BOARD_SPECIFIC_OPTIONS
 	def_bool y
 	select BOARD_ROMSIZE_KB_32768
-	select HAVE_ACPI_TABLES
-	select SUPERIO_ASPEED_AST2400
 	select DRIVERS_ASPEED_AST_COMMON
 	select DRIVERS_ASPEED_AST2050
+	select HAVE_ACPI_TABLES
+	select ONBOARD_VGA_IS_PRIMARY
 	select SOC_INTEL_CANNONLAKE_PCH_H
 	select SOC_INTEL_COFFEELAKE
-	select ONBOARD_VGA_IS_PRIMARY
 	select SOC_INTEL_COMMON_BLOCK_LPC_COMB_ENABLE
+	select SUPERIO_ASPEED_AST2400
 
 config MAINBOARD_DIR
-	string
 	default "asrock/e3c246d4i"
 
 config MAINBOARD_PART_NUMBER
-	string
 	default "E3C246D4I"
 
 config CBFS_SIZE
-	hex
 	default 0x800000
 
 config CONSOLE_POST
-	bool
 	default y
 
 config ONBOARD_VGA_IS_PRIMARY
-	bool
 	default y
 
 # 0 - 0x3f8: physical COM1 port
 # 1 - 0x2f8: SOL console on BMC
 config UART_FOR_CONSOLE
-	int
 	default 1
 
 config MAX_CPUS
-	int
 	default 16
 
 config DIMM_MAX
-	int
 	default 4
 
 endif
