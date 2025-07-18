@@ -5,14 +5,11 @@ chip soc/intel/cannonlake
 	register "DisableHeciRetry" = "1"
 
 	# Enable Enhanced Intel SpeedStep
-	register "eist_enable" = "1"
+	register "eist_enable" = "true"
 
 	register "serirq_mode" = "SERIRQ_CONTINUOUS"
 
 # Actual device tree
-	device cpu_cluster 0 on
-		device lapic 0 on end
-	end
 
 	# FIXME: Refine PCIe clock source/request settings
 	register "PcieClkSrcUsage[0]"  = "0x80"
@@ -108,15 +105,13 @@ chip soc/intel/cannonlake
 		device pci 1b.2 off end      # PCI Express Port 19
 		device pci 1b.3 off end      # PCI Express Port 20
 		device pci 1b.4 on           # PCI Express Port 21: Ethernet 10G controller
-			register "PcieRpEnable[20]" = "1"
-			register "PcieRpLtrEnable[20]" = "1"
+			register "PcieRpLtrEnable[20]" = "true"
 		end
 		device pci 1b.5 off end      # PCI Express Port 22
 		device pci 1b.6 off end      # PCI Express Port 23
 		device pci 1b.7 off end      # PCI Express Port 24
 		device pci 1c.0 on           # PCI Express Port 1: Aspeed BMC
-			register "PcieRpEnable[0]" = "1"
-			register "PcieRpLtrEnable[0]" = "1"
+			register "PcieRpLtrEnable[0]" = "true"
 		end
 		device pci 1c.1 off end      # PCI Express Port 2
 		device pci 1c.2 off end      # PCI Express Port 3
@@ -126,15 +121,13 @@ chip soc/intel/cannonlake
 		device pci 1c.6 off end      # PCI Express Port 7
 		device pci 1c.7 off end      # PCI Express Port 8
 		device pci 1d.0 on           # PCI Express Port 9
-			register "PcieRpEnable[8]" = "1"
-			register "PcieRpLtrEnable[8]" = "1"
+			register "PcieRpLtrEnable[8]" = "true"
 		end
 		device pci 1d.1 off end      # PCI Express Port 10
 		device pci 1d.2 off end      # PCI Express Port 11
 		device pci 1d.3 off end      # PCI Express Port 12
 		device pci 1d.4 on           # PCI Express Port 13
-			register "PcieRpEnable[12]" = "1"
-			register "PcieRpLtrEnable[12]" = "1"
+			register "PcieRpLtrEnable[12]" = "true"
 		end
 		device pci 1d.5 off end      # PCI Express Port 14
 		device pci 1d.6 off end      # PCI Express Port 15
