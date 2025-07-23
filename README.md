@@ -5,7 +5,7 @@ fork INFO
 This coreboot fork includes ongoing work for the [ASRock E3C246D4I](https://www.asrockrack.com/general/productdetail.asp?Model=E3C246D4I-2T#Specifications) server mainboard based on a port by [Arthur Heymans](https://github.com/arthurheymans)
 
 A detailed usage guide is available here: 
-[Revisiting open-source firmware on the e3c246d4i](https://vandermeij.tech/revisiting-open-source-firmware-on-the-e3c246d4i.html)
+[Revisiting open-source firmware on the e3c246d4i](https://vandermeij.tech/revisiting-open-source-firmware-on-the-e3c246d4i)
 
 coreboot README
 ===============
