@@ -34,7 +34,7 @@ chip soc/intel/cannonlake
 			smbios_slot_desc "SlotTypePciExpressGen3X16"
 					 "SlotLengthLong"
 		end
-		device ref         igpu    off end # pci 02.0
+		device ref         igpu     on end # pci 02.0
 		device ref         dptf    off end # pci 04.0 SA Thermal
 		device ref      thermal     on end # pci 12.0 (needed for FSP)
 		device ref          ufs    off end # pci 12.5
