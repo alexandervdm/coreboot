@@ -105,20 +105,20 @@ chip soc/intel/cannonlake
 		device ref        uart2    off end # pci 19.2
 		device ref         emmc    off end # pci 1a.0
 
-		device ref    pcie_rp17    off end # pci 1b.0
+		device ref    pcie_rp17     on	   # pci 1b.0 = OCU2
+			register "PcieRpLtrEnable[16]" = "true"
+		end
 		device ref    pcie_rp18    off end # pci 1b.1
 		device ref    pcie_rp19    off end # pci 1b.2
 		device ref    pcie_rp20    off end # pci 1b.3
-		device ref    pcie_rp21     on     # pci 1b.4
-			# Ethernet 10G controller
+		device ref    pcie_rp21     on     # pci 1b.4 = X550 NICs
 			register "PcieRpLtrEnable[20]" = "true"
 		end
 		device ref    pcie_rp22    off end # pci 1b.5
 		device ref    pcie_rp23    off end # pci 1b.6
 		device ref    pcie_rp24    off end # pci 1b.7
 
-		device ref    pcie_rp1      on     # pci 1c.0
-			# Aspeed BMC
+		device ref    pcie_rp1      on     # pci 1c.0 = Aspeed BMC
 			register "PcieRpLtrEnable[0]" = "true"
 		end
 		device ref    pcie_rp2     off end # pci 1c.1
@@ -129,13 +129,13 @@ chip soc/intel/cannonlake
 		device ref    pcie_rp7     off end # pci 1c.6
 		device ref    pcie_rp8     off end # pci 1c.7
 
-		device ref    pcie_rp9      on     # pci 1d.0
+		device ref    pcie_rp9      on     # pci 1d.0 = M.2 NVMe
 			register "PcieRpLtrEnable[8]" = "true"
 		end
 		device ref    pcie_rp10    off end # pci 1d.1
 		device ref    pcie_rp11    off end # pci 1d.2
 		device ref    pcie_rp12    off end # pci 1d.3
-		device ref    pcie_rp13     on     # pci 1d.4
+		device ref    pcie_rp13     on     # pci 1d.4 = OCU1
 			register "PcieRpLtrEnable[12]" = "true"
 		end
 		device ref    pcie_rp14    off end # pci 1d.5
