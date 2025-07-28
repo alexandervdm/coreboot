@@ -1,21 +1,10 @@
-coreboot README
-===============
+fork INFO
+=========
 
-coreboot is a Free Software project aimed at replacing the proprietary
-firmware (BIOS/UEFI) found in most computers. coreboot performs the
-required hardware initialization to configure the system, then passes
-control to a different executable, referred to in coreboot as the
-payload. Most often, the primary function of the payload is to boot the
-operating system (OS).
+This coreboot fork includes ongoing work for the [ASRock E3C246D4I](https://www.asrockrack.com/general/productdetail.asp?Model=E3C246D4I-2T#Specifications) server mainboard based on a port by [Arthur Heymans](https://github.com/arthurheymans)
 
-With the separation of hardware initialization and later boot logic,
-coreboot is perfect for a wide variety of situations. It can be used
-for specialized applications that run directly in the firmware, running
-operating systems from flash, loading custom bootloaders, or
-implementing firmware standards, like PC BIOS services or UEFI. This
-flexibility allows coreboot systems to include only the features
-necessary in the target application, reducing the amount of code and
-flash space required.
+A detailed usage guide is available here: 
+[Revisiting open-source firmware on the e3c246d4i](https://vandermeij.tech/revisiting-open-source-firmware-on-the-e3c246d4i/)
 
 
 Source code
